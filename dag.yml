@@ -239,3 +239,5 @@ steps:
     - walden://wpp/2019/standard_projections
   grapher://who/2021-07-01/ghe:
     - data://garden/who/2021-07-01/ghe
+  data://meadow/wb/2021-07-01/wb_income:
+    - walden://wb/2021-07-01/wb_income
