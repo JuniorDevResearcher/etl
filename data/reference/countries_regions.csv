@@ -12,7 +12,7 @@ ATG,Antigua and Barbuda,AG,ATG,311.0,AAB,58.0,ANT,AQ,,ATG,ATG,http://www.wikidat
 ARG,Argentina,AR,ARG,213.0,ARG,160.0,ARG,AG,ARGN,ARG,ARG,http://www.wikidata.org/entity/Q414,Argentina,21.0,569.0,,
 ARM,Armenia,AM,ARM,911.0,ARM,371.0,,AI,,ARM,ARM,http://www.wikidata.org/entity/Q399,Armenia,22.0,570.0,,
 ABW,Aruba,AW,ABW,314.0,,,ARU,AW,,ABW,ABW,http://www.wikidata.org/entity/Q21203,Aruba,219.0,561.0,,
-AUS,Australia,AU,AUS,193.0,AUL,900.0,,AT,AUSL,AUS,AUS,http://www.wikidata.org/entity/Q408,Australia,23.0,573.0,,
+AUS,Australia,AU,AUS,193.0,AUL,900.0,,AT,AUSL,AUS,AUS,http://www.wikidata.org/entity/Q408,Australia,23.0,573.0,,"[""Autralia""]"
 AUT,Austria,AT,AUT,122.0,AUS,305.0,,AU,AUST,AUT,AUT,http://www.wikidata.org/entity/Q40,Austria,24.0,574.0,,
 OWID_AUH,Austria-Hungary,,,,AUH,300.0,,,,,,,,373.0,822.0,,
 AZE,Azerbaijan,AZ,AZE,912.0,AZE,373.0,AZE,AJ,,AZE,AZE,http://www.wikidata.org/entity/Q227,Azerbaijan,25.0,575.0,,
@@ -66,7 +66,7 @@ CYP,Cyprus,CY,CYP,423.0,CYP,352.0,CYP,CY,CYPR,CYP,CYP,http://www.wikidata.org/en
 CZE,Czechia,CZ,CZE,935.0,CZR,316.0,CZE,XR,,CZE,CZE,http://www.wikidata.org/entity/Q213,Czech Republic,162.0,613.0,,
 OWID_CZS,Czechoslovakia,,,,CZE,315.0,,,,,,,,267.0,823.0,,
 COD,Democratic Republic of Congo,CD,COD,636.0,DRC,490.0,ZAI,CG,ZAIR,,ZAR,http://www.wikidata.org/entity/Q974,Democratic Republic of the Congo,167.0,602.0,,"[""Congo, The Democratic Republic Of The"", ""Democratic Republic of the Congo""]"
-DNK,Denmark,DK,DNK,128.0,DEN,390.0,,DK,DNMK,DNK,DNK,http://www.wikidata.org/entity/Q35,Denmark,161.0,617.0,,
+DNK,Denmark,DK,DNK,128.0,DEN,390.0,,DK,DNMK,DNK,DNK,http://www.wikidata.org/entity/Q35,Denmark,161.0,617.0,,"[""Denmark (and dependencies)""]"
 DJI,Djibouti,DJ,DJI,611.0,DJI,522.0,DJI,FT,,DJI,DJI,http://www.wikidata.org/entity/Q977,Djibouti,154.0,615.0,,
 DMA,Dominica,DM,DMA,321.0,DMA,54.0,DMI,DQ,,DMA,DMA,http://www.wikidata.org/entity/Q784,Dominica,200.0,616.0,,
 DOM,Dominican Republic,DO,DOM,243.0,DOM,42.0,DOM,DR,DMNR,DOM,DOM,http://www.wikidata.org/entity/Q786,Dominican Republic,160.0,618.0,,
