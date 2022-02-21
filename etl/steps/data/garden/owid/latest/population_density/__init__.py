@@ -34,7 +34,6 @@ def load_land_area() -> Table:
     table = table.reset_index()
 
     # harmonize country names
-    # TODO: fix this
     reference_dataset = catalog.Dataset(DATA_DIR / "reference")
     countries_regions = reference_dataset["countries_regions"]
 
@@ -68,7 +67,6 @@ def make_table() -> Table:
         land_area.sort_values("year").groupby(["country"], as_index=False).last()
     )
 
-    # TODO: is merge gonna keep Table type? if not, fix just given country column
     df = pd.merge(
         land_area[["country", "land_area"]],
         population[["country", "population", "year"]],
@@ -88,7 +86,7 @@ def make_table() -> Table:
 
     df.metadata.short_name = "population-density"
     df.metadata.description = "Population density (World Bank, Gapminder, HYDE & UN)"
-    return df
+    return df.set_index(["country", "year"])
 
 
 def run(dest_dir: str) -> None:
