@@ -59,9 +59,6 @@ def make_table() -> Table:
     population = load_population()
     land_area = load_land_area()
 
-    population = population.loc[population.country == "Singapore"]
-    land_area = land_area.loc[land_area.country == "Singapore"]
-
     # take the latest measurement of land area
     land_area = (
         land_area.sort_values("year").groupby(["country"], as_index=False).last()

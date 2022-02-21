@@ -52,6 +52,8 @@ def upsert_dataset(
         cursor = connection.cursor()
         db = DBUtils(cursor)
 
+        import ipdb; ipdb.set_trace()
+
         print("Verifying namespace is present")
         ns = db.fetch_one_or_none("SELECT * from namespaces where name=%s", [namespace])
         if ns is None:

@@ -8,6 +8,8 @@ from pathlib import Path
 from typing import Optional, Dict, Literal, cast, List, Any
 from pydantic import BaseModel
 
+from etl.paths import DATA_DIR
+
 
 # TODO: remove if it turns out to be useless for real examples
 class DatasetModel(BaseModel):
@@ -151,3 +153,13 @@ def dataset_table_names(ds: catalog.Dataset) -> List[str]:
     """Return table names of a dataset.
     TODO: move it to Dataset as a method"""
     return [t.metadata.short_name for t in ds if t.metadata.short_name is not None]
+
+
+def country_to_entity_id(country: pd.Series) -> pd.Series:
+    """Convert country name to grapher entity_id."""
+    reference_dataset = catalog.Dataset(DATA_DIR / "reference")
+    countries_regions = reference_dataset["countries_regions"]
+    country_map = countries_regions.set_index("name")["legacy_entity_id"]
+    entity_id = country.map(country_map)
+    assert not (entity_id.isnull()).any(), 'Some countries are not in the reference dataset'
+    return cast(pd.Series, entity_id.astype(int))
