@@ -41,7 +41,7 @@ def make_table() -> Table:
     return t
 
 
-def _compare(a: pd.DataFrame, b: pd.DataFrame):
+def _compare(a: pd.DataFrame, b: pd.DataFrame) -> pd.DataFrame:
     assert a.index.names == b.index.names
     index_names = a.index.names
     a = a.reset_index()
@@ -58,7 +58,7 @@ def _compare(a: pd.DataFrame, b: pd.DataFrame):
     return a.compare(b)
 
 
-def _validate(t):
+def _validate(t: Table) -> None:
     """Is the new population data identical to a version from importers?"""
     COLS_MAP = {
         "Entity": "country",
@@ -82,8 +82,8 @@ def _validate(t):
     t = t[t.index.isin(old_df.index)]
 
     # TODO: continent population is significantly different (e.g. Europe)
-    comp = _compare(pd.DataFrame(t), old_df)
-    pop_diff = comp.population.self - comp.population.other
+    # TODO: validate comparison
+    _compare(pd.DataFrame(t), old_df)
 
 
 def rename_entities(df: pd.DataFrame) -> pd.DataFrame:
@@ -110,7 +110,7 @@ def rename_entities(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def _assert_unique(df: pd.DataFrame, subset: List):
+def _assert_unique(df: pd.DataFrame, subset: List[str]) -> None:
     """Make sure dataframe have only one row per subset"""
     # NOTE: this could be moved to helpers
     df_deduped = df.drop_duplicates(subset=subset)
@@ -246,7 +246,7 @@ def load_unwpp() -> pd.DataFrame:
             source="unwpp", population=lambda df: df.population.mul(1000).astype(int)
         )[["country", "year", "population", "source"]]
     )
-    return df
+    return cast(pd.DataFrame, df)
 
 
 def make_combined() -> pd.DataFrame:
