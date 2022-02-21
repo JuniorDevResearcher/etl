@@ -1,6 +1,10 @@
 steps:
   data://garden/owid/latest/covid:
     - etag://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv
+  data://garden/owid/latest/population_density:
+    - data://garden/owid/latest/key_indicators
+    - data://meadow/open_numbers/latest/open_numbers__world_development_indicators
+    - data://reference
   data://garden/owid/latest/key_indicators:
     - data://meadow/hyde/2017/baseline
     - data://meadow/gapminder/2019-12-10/population
